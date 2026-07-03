@@ -4,5 +4,4 @@ set -eu
 ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 cd "$ROOT_DIR"
 
-./scripts/test.sh
-echo "Checks passed"
+make -B test

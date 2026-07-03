@@ -1,22 +1,29 @@
 # Architecture
 
-Nine Palace Index currently has two core binaries:
+Nine Palace Index currently has a small two-binary architecture:
 
-- `bin/weight` (`src/weight.c`)
+- `src/weight.c` (`bin/weight`)
   - Loads keyword/category/weight rules from `config/weights.conf`
-  - Accepts a record from CLI input
-  - Calculates weight and category (manual or auto mode)
-  - Persists records into `records.dat` (binary format)
-- `bin/index` (`src/index.cpp`)
+  - Accepts content from CLI input and classifies manually or automatically
+  - Calculates weights and appends records into `records.dat`
+- `src/index.cpp` (`bin/index`)
   - Reads `records.dat`
-  - Prints human-readable output or JSON (`--json`)
-  - Aggregates category weights for quick inspection
+  - Prints records and category statistics
+  - Supports plain output and `--json`
+
+## Data Model
+
+- File header (`magic`, `version`, `count`)
+- Record entries (`id`, `category`, `content`, `weight`, `created_at`)
+
+`records.dat` is a binary file shared between the C writer and C++ reader.
 
 ## Data Flow
 
-1. `weight` reads config and existing records.
-2. New content is classified and stored.
-3. `index` reads the same store for reporting/export.
+1. `weight` parses keyword rules from `config/weights.conf`.
+2. `weight` classifies content and computes weight.
+3. `weight` loads existing `records.dat`, appends a new record, and writes back.
+4. `index` reads the file, aggregates category weights, and renders output.
 
 ## Design Notes
 

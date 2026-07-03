@@ -31,7 +31,7 @@ It is being developed under constrained conditions — primarily on a mobile dev
 ├── Makefile
 ├── README.md
 ├── VERSION
-├── bin/
+├── build.sh
 ├── config/
 ├── docs/
 │   ├── ARCHITECTURE.md
@@ -41,9 +41,9 @@ It is being developed under constrained conditions — primarily on a mobile dev
 ├── scripts/
 │   ├── build.sh
 │   ├── check.sh
-│   └── run.sh
+│   ├── run.sh
+│   └── test.sh
 ├── src/
-├── build.sh
 ├── test.sh
 └── records.dat
 ```
@@ -57,7 +57,8 @@ It is being developed under constrained conditions — primarily on a mobile dev
 # Run one record insertion
 ./scripts/run.sh "Termux mobile workflow test"
 
-# Run existing project checks
+# Run tests and checks
+./scripts/test.sh
 ./scripts/check.sh
 ```
 
@@ -68,6 +69,19 @@ It is being developed under constrained conditions — primarily on a mobile dev
 - **Version Control:** Git + GitHub
 - **Remote Protocol:** SSH
 - **Primary Languages:** C / C++
+
+## Mobile-first Workflow (Termux)
+
+Use helper scripts for a minimal and repeatable workflow:
+
+```bash
+./scripts/build.sh
+./scripts/test.sh
+./scripts/run.sh
+./scripts/check.sh
+```
+
+Top-level `build.sh` / `test.sh` remain available for compatibility.
 
 ## Philosophy
 
