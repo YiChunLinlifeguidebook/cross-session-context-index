@@ -48,6 +48,20 @@ It is being developed under constrained conditions — primarily on a mobile dev
 └── records.dat
 ```
 
+## Quick Start
+
+```bash
+# Build
+./scripts/build.sh
+
+# Run one record insertion
+./scripts/run.sh "Termux mobile workflow test"
+
+# Run tests and checks
+./scripts/test.sh
+./scripts/check.sh
+```
+
 ## Development Environment
 
 - **Device:** OPPO Reno 14

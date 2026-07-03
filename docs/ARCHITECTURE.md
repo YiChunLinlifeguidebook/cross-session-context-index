@@ -3,9 +3,9 @@
 Nine Palace Index currently has a small two-binary architecture:
 
 - `src/weight.c` (`bin/weight`)
-  - Loads keyword rules from `config/weights.conf`
-  - Calculates weights from input content
-  - Appends records into `records.dat`
+  - Loads keyword/category/weight rules from `config/weights.conf`
+  - Accepts content from CLI input and classifies manually or automatically
+  - Calculates weights and appends records into `records.dat`
 - `src/index.cpp` (`bin/index`)
   - Reads `records.dat`
   - Prints records and category statistics
@@ -21,12 +21,13 @@ Nine Palace Index currently has a small two-binary architecture:
 ## Data Flow
 
 1. `weight` parses keyword rules from `config/weights.conf`.
-2. `weight` classifies or accepts a category and computes weight.
+2. `weight` classifies content and computes weight.
 3. `weight` loads existing `records.dat`, appends a new record, and writes back.
 4. `index` reads the file, aggregates category weights, and renders output.
 
 ## Design Notes
 
-- Lightweight CLI-first design for Termux/mobile workflows.
-- No external runtime dependencies beyond standard C/C++ toolchains.
-- Intentional early-stage simplicity to keep iteration fast.
+- Keep runtime simple for Termux/mobile constraints.
+- Use plain C/C++ binaries and a Makefile-based build.
+- Prefer minimal dependencies and transparent data handling.
+- Preserve project direction toward **Mechanical Soul** and **Life Guidebook** while keeping engineering output practical.
