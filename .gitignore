@@ -1,16 +1,15 @@
 # ===== secrets / keys =====
 *.pem
 *.key
-*.pub
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
 .env
 .env.*
 secrets/
 credentials/
 *.token
-
-# keep current ssh private material out of repo
-lin0901210103@gmail.com
-lin0901210103@gmail.com.pub
 
 # ===== build outputs =====
 *.o
@@ -19,13 +18,12 @@ lin0901210103@gmail.com.pub
 *.so
 *.exe
 *.log
+bin/
 
 # project local binaries
 t
 test
 weight
-bin/index
-bin/weight
 
 # ===== editor / os =====
 .DS_Store
