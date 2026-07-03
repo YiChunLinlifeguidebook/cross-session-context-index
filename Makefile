@@ -15,6 +15,7 @@ bin/index: src/index.cpp | bin
 	$(CXX) $(CXXFLAGS) -o bin/index src/index.cpp
 
 test: all
+	rm -f records.dat
 	./bin/weight config/weights.conf records.dat JIU_C "系統核心架構測試"
 	./bin/weight config/weights.conf records.dat JIU_ES "Termux測試環境"
 	./bin/weight config/weights.conf records.dat JIU_W "商業計畫架構"
