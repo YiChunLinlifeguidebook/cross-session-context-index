@@ -1,12 +1,39 @@
-# SSH 金鑰（絕對不能上傳）
+# ===== secrets / keys =====
+*.pem
+*.key
+*.pub
+.env
+.env.*
+secrets/
+credentials/
+*.token
+
+# keep current ssh private material out of repo
 lin0901210103@gmail.com
 lin0901210103@gmail.com.pub
 
-# 編譯產出的執行檔
+# ===== build outputs =====
+*.o
+*.out
+*.a
+*.so
+*.exe
+*.log
+
+# project local binaries
 t
 test
 weight
+bin/index
+bin/weight
 
-# 編譯暫存
-*.o
-*.out
+# ===== editor / os =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== temporary =====
+tmp/
+temp/
+.cache/
