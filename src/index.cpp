@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <cstring>
 #include <ctime>
+#include <cstdint>
 using namespace std;
 
 struct FileHeader {

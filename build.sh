@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e
 
-make
+make -B
 echo "✅ Build complete"

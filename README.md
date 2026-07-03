@@ -31,11 +31,19 @@ It is being developed under constrained conditions — primarily on a mobile dev
 ├── Makefile
 ├── README.md
 ├── VERSION
-├── bin/
+├── build.sh
 ├── config/
 ├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── DEVELOPMENT.md
+│   ├── PROJECT_OVERVIEW.md
+│   └── ROADMAP.md
+├── scripts/
+│   ├── build.sh
+│   ├── check.sh
+│   ├── run.sh
+│   └── test.sh
 ├── src/
-├── build.sh
 ├── test.sh
 └── records.dat
 ```
@@ -47,6 +55,19 @@ It is being developed under constrained conditions — primarily on a mobile dev
 - **Version Control:** Git + GitHub
 - **Remote Protocol:** SSH
 - **Primary Languages:** C / C++
+
+## Mobile-first Workflow (Termux)
+
+Use helper scripts for a minimal and repeatable workflow:
+
+```bash
+./scripts/build.sh
+./scripts/test.sh
+./scripts/run.sh
+./scripts/check.sh
+```
+
+Top-level `build.sh` / `test.sh` remain available for compatibility.
 
 ## Philosophy
 
