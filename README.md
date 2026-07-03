@@ -21,6 +21,25 @@ It is being developed under constrained conditions — primarily on a mobile dev
 - Mobile-first development in Termux
 - Maintainable project structure for future expansion
 
+## 快速開始（Termux）
+
+```sh
+# 1. 編譯
+make build
+
+# 2. 寫入一筆記錄（自動分類）
+./bin/weight config/weights.conf records.dat "AI生成式系統核心架構"
+
+# 3. 查看索引統計
+./bin/index records.dat
+
+# 4. JSON 格式輸出
+./bin/index records.dat --json
+
+# 5. 安裝到 PATH（可選）
+make install
+```
+
 ## Project Structure
 
 ```text
