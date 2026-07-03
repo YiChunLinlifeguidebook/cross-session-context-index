@@ -1,0 +1,12 @@
+# SSH 金鑰（絕對不能上傳）
+lin0901210103@gmail.com
+lin0901210103@gmail.com.pub
+
+# 編譯產出的執行檔
+t
+test
+weight
+
+# 編譯暫存
+*.o
+*.out
