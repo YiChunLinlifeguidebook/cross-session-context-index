@@ -34,10 +34,31 @@ It is being developed under constrained conditions — primarily on a mobile dev
 ├── bin/
 ├── config/
 ├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── DEVELOPMENT.md
+│   ├── PROJECT_OVERVIEW.md
+│   └── ROADMAP.md
+├── scripts/
+│   ├── build.sh
+│   ├── check.sh
+│   └── run.sh
 ├── src/
 ├── build.sh
 ├── test.sh
 └── records.dat
+```
+
+## Quick Start
+
+```bash
+# Build
+./scripts/build.sh
+
+# Run one record insertion
+./scripts/run.sh "Termux mobile workflow test"
+
+# Run existing project checks
+./scripts/check.sh
 ```
 
 ## Development Environment
