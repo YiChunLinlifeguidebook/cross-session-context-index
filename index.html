@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCDGS — 悟空系統</title>
+    <style>
+        /* 重置與基礎 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #080c14;
+            color: #c8d0dc;
+            line-height: 1.7;
+        }
+        .container { max-width: 1120px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* 標題區域 */
+        .hero {
+            text-align: center;
+            padding: 4rem 0 2.5rem;
+            border-bottom: 1px solid #1a2a3a;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4ff, #7b2ffc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #8a9aa8;
+            margin-top: 0.5rem;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #142433;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #00d4ff;
+            margin-top: 1rem;
+            border: 1px solid #1a3a4a;
+        }
+
+        /* 卡片網格 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        .card {
+            background: #0f1824;
+            border: 1px solid #1a2a3a;
+            border-radius: 14px;
+            padding: 1.6rem;
+            transition: 0.25s ease;
+        }
+        .card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-3px);
+        }
+        .card h3 {
+            color: #e8edf5;
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+        .card p {
+            color: #9aabb8;
+            font-size: 0.95rem;
+        }
+        .card .tag {
+            display: inline-block;
+            background: #1a2a3a;
+            padding: 0.1rem 0.8rem;
+            border-radius: 16px;
+            font-size: 0.7rem;
+            color: #7b9bb8;
+            margin-top: 0.6rem;
+        }
+
+        /* 架構層列表 */
+        .layer-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.2rem 0 0.5rem;
+        }
+        .layer-list span {
+            background: #0f1a28;
+            padding: 0.15rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            border: 1px solid #1a2a3a;
+            color: #b0c8dd;
+        }
+
+        /* 數據亮點 */
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .highlight-item {
+            background: #0f1824;
+            border-radius: 12px;
+            padding: 1.2rem 0.8rem;
+            text-align: center;
+            border: 1px solid #1a2a3a;
+        }
+        .highlight-item .num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00d4ff;
+        }
+        .highlight-item .label {
+            font-size: 0.8rem;
+            color: #8a9aa8;
+            margin-top: 0.2rem;
+        }
+
+        /* 頁尾 */
+        .footer {
+            text-align: center;
+            border-top: 1px solid #1a2a3a;
+            padding-top: 2rem;
+            margin-top: 2.5rem;
+            font-size: 0.9rem;
+            color: #5a6a78;
+        }
+        .footer a {
+            color: #6a9bc8;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>QCDGS — 悟空系統</h1>
+        <p>輕量級通用決策引擎 · 六層分形架構 · 20 種決策模態</p>
+        <span class="badge">v4.1 · 已驗證 · 可離線運行</span>
+    </div>
+
+    <!-- 核心數據 -->
+    <div class="highlight-grid">
+        <div class="highlight-item"><div class="num">100%</div><div class="label">壓力測試成功率</div></div>
+        <div class="highlight-item"><div class="num">&lt;0.03ms</div><div class="label">單次決策延遲</div></div>
+        <div class="highlight-item"><div class="num">&lt;2MB</div><div class="label">記憶體佔用</div></div>
+        <div class="highlight-item"><div class="num">60%+</div><div class="label">回測勝率</div></div>
+    </div>
+
+    <!-- 六層架構 -->
+    <div class="grid">
+        <div class="card"><h3>L1 — 路由層</h3><p>輸入分流與路徑判斷，動態調度</p><div class="tag">九宮路由</div></div>
+        <div class="card"><h3>L2 — 分類層</h3><p>五行資料分類，屬性識別</p><div class="tag">資料分類</div></div>
+        <div class="card"><h3>L3 — 狀態節點層</h3><p>64 狀態機管理與轉移控制</p><div class="tag">狀態機</div></div>
+        <div class="card"><h3>L4 — 動態響應層</h3><p>外部服務轉接、驗證、修復、降級</p><div class="tag">七十二變</div></div>
+        <div class="card"><h3>L5 — 能力組裝層</h3><p>八卦模組組合，功能組裝</p><div class="tag">八卦</div></div>
+        <div class="card"><h3>L6 — 二元決策層</h3><p>輸出最終決策：通過／阻擋</p><div class="tag">陰陽決策</div></div>
+    </div>
+
+    <!-- 決策模態 -->
+    <div style="margin: 2.5rem 0;">
+        <h2 style="font-weight: 400; font-size: 1.3rem; margin-bottom: 1rem; color: #b0c8dd;">⚡ 20 種決策模態（並行運算）</h2>
+        <div class="layer-list">
+            <span>生物特徵</span><span>頻譜分析</span><span>共振</span><span>節律</span>
+            <span>光學軌跡</span><span>背景場域</span><span>統計停滯</span><span>疊加狀態</span>
+            <span>高溫特徵</span><span>穿透</span><span>跨域關聯</span><span>路徑探索</span>
+            <span>能量侷限</span><span>狀態轉換</span><span>微觀震盪</span><span>結構重組</span>
+            <span>綜合特徵</span><span>能量回補</span><span>高強度特徵</span><span>聲光耦合</span>
+        </div>
+    </div>
+
+    <!-- 外部整合 -->
+    <div style="background: #0f1824; border-radius: 14px; padding: 1.2rem 1.5rem; border: 1px solid #1a2a3a;">
+        <p style="color: #9aabb8; font-size: 0.95rem;">
+            <strong style="color: #c8d8e8;">🔌 外部接入</strong><br>
+            Google API · 合作夥伴 API · MCP/MTP 協議 · 自訂 API
+        </p>
+        <p style="color: #7b9bb8; font-size: 0.85rem; margin-top: 0.4rem;">
+            已取得 Google for Startups Cloud Program 資源支持
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>機械靈魂 Mechanical Soul · 創辦人 林毅駿（阿駿）</p>
+        <p style="margin-top: 0.3rem;">
+            <a href="https://github.com/YiChunLinlifeguidebook/nine-palace-index">GitHub</a> ·
+            <span>產品驗證完成 · 平台整合中</span>
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
